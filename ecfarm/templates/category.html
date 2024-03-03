@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<div>
+    <img src="{% static 'images/ag.jpg' %}" height="500px" width="100%">
+</div>
+<div class="container-fluid mt-4" style="margin-bottom:100px;">
+    <h3 class="text-center fw-bold">our collections</h3>
+    <p style="line-height:1.8;text-align:justify;">hgiugtrw5iu080ttrrewuuukhkjgtdreahjkuopu[puyregut56e4wyfjgihioyiuttr
+    hujkkiugrsersdyug gyred 3hygdewf ufhvmklrhgv why should i hire u how are what is ur strength why u choose this field dgjesigrgtjhhktrh
+    gjgwevrjheituoyutrjgyt jhsefiogdwyqf wegf;kdnd yfrsrvv;fdkufgwcd teerfg hdikvgfuk dfloeshl dejgqqq hftuiewt uregtfvhj qeytfv
+    wejgrvh whvt4ighsdff sjfdgbdnmhhtyjtyjkljrtf rtu8uo</p>
+</div>
+<div class="container-fluid mt-2" style="margin-bottom:100px;">
+    <div class="row">
+        {% for i in c %}
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+  <img src="{{i.image.url}}" class="card-img-top" alt="..." height="250px" width="100%">
+  <div class="card-body">
+    <h5 class="card-title text-center">{{i.name}}</h5>
+    <a href="{% url 'shop:allproducts' i.name %}" class="btn btn-primary" style="position:relative;left:35%;">products</a>
+  </div>
+</div>
+        </div>{% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
